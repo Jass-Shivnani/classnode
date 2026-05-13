@@ -2,7 +2,7 @@
 
 > A cross-platform student app with realtime sync, built with Kotlin Multiplatform.
 
-**Classnode** is a student-focused platform I've been building since early 2025 and I'm still actively working on it. It started as a way to help my class stay organized — track attendance, share notes, manage timetables — and it turned into a full cross-platform app that runs on both Android and iOS from a single codebase.
+**Classnode** is a student-focused platform we've been building since early 2025 and we're still actively working on it. It started as a way to help our class stay organized — track attendance, share notes, manage timetables — and it turned into a full cross-platform app that runs on both Android and iOS from a single codebase.
 
 This is a **showcase repository** — the source code is in a private repo since I plan to publish Classnode on the Play Store.
 
@@ -66,11 +66,15 @@ This is a **showcase repository** — the source code is in a private repo since
 
 ---
 
-## 👤 Developer
+## 👥 Developers
 
 **Jass Suraj Shivnani**  
 B.E. Computer Engineering, VESIT Mumbai (Batch 2027)  
 [LinkedIn](https://linkedin.com/in/jass-shivnani-409b5a35a) · [GitHub](https://github.com/Jass-Shivnani)
+
+**Riya Sanjay Khialani**  
+B.E. Computer Engineering, VESIT Mumbai (Batch 2027)  
+[LinkedIn](https://www.linkedin.com/in/riya-khialani-596a4a3b6/) · [GitHub](https://github.com/Riya-Khialani)
 
 ---
 
