@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap");
+
+body { background: #f2f5f7 !important; color: #10233c !important; font-family: "Manrope", Arial, sans-serif !important; }
+body::before { content: ""; position: fixed; inset: 0; z-index: -1; background-image: linear-gradient(rgba(16,35,60,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(16,35,60,.055) 1px, transparent 1px); background-size: 58px 58px; mask-image: linear-gradient(black, transparent); }
+.card, .container { background: rgba(255,255,255,.92) !important; border: 1px solid #d6dee6 !important; border-radius: 5px !important; box-shadow: 9px 9px 0 #d8e3ed !important; }
+.card { max-width: 500px !important; }
+.container { max-width: 780px !important; }
+h1, h2, h3 { color: #10233c !important; letter-spacing: -.055em; }
+p, li, .subtext { color: #35506c !important; }
+a { color: #21499e !important; font-weight: 700; }
+.btn, .btn-danger { border-radius: 3px !important; background: #10233c !important; box-shadow: 3px 3px 0 #326ae5 !important; }
+.btn-danger { background: #b93448 !important; box-shadow: 3px 3px 0 #f0a0ad !important; }
+.code-box { border: 1px solid #bcd0ee !important; border-radius: 3px !important; background: #e7efff !important; }.code-value { color: #10233c !important; }
+input, textarea { border-color: #c8d2dc !important; border-radius: 3px !important; background: #fbfcfd !important; color: #10233c !important; }
