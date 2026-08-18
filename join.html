@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join Class on ClassNode</title>
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0B0E14;
+      --card: #151921;
+      --border: #222938;
+      --text: #F1F5F9;
+      --text-dim: #94A3B8;
+      --primary: #326AE5;
+      --accent: #26A976;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      padding: 24px;
+      text-align: center;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 40px 32px;
+      max-width: 480px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+    .logo { width: 56px; height: 56px; margin: 0 auto 24px; }
+    h1 { font-size: 26px; font-weight: 800; margin-bottom: 12px; }
+    p { color: var(--text-dim); font-size: 15px; margin-bottom: 28px; line-height: 1.6; }
+    .code-box {
+      background: rgba(50, 106, 229, 0.1);
+      border: 2px dashed rgba(50, 106, 229, 0.4);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 28px;
+    }
+    .code-label { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--primary); font-weight: 700; margin-bottom: 6px; }
+    .code-value { font-family: 'JetBrains Mono', monospace; font-size: 32px; font-weight: 700; color: #fff; letter-spacing: 4px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      width: 100%;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      padding: 16px 24px;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: 700;
+      box-shadow: 0 4px 20px rgba(50, 106, 229, 0.4);
+      transition: transform 0.2s, opacity 0.2s;
+    }
+    .btn:hover { transform: translateY(-2px); opacity: 0.95; }
+    .subtext { margin-top: 20px; font-size: 13px; color: var(--text-dim); }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <img src="/logo.svg" alt="ClassNode" class="logo" />
+    <h1>You're Invited to a Class!</h1>
+    <p>A classmate invited you to collaborate, sync timetables, and share notes automatically on ClassNode.</p>
+
+    <div class="code-box">
+      <div class="code-label">Class Invite Code</div>
+      <div class="code-value" id="invite-code">CLASS</div>
+    </div>
+
+    <a href="#" id="open-app-btn" class="btn">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+      Open in ClassNode
+    </a>
+
+    <div class="subtext">
+      Don't have the app? <a href="/#download" style="color: var(--primary); text-decoration: none; font-weight: 600;">Download ClassNode</a>
+    </div>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const code = urlParams.get('code') || window.location.pathname.split('/').filter(Boolean).pop() || 'CLASS';
+    const cleanCode = code.toUpperCase().replace(/[^A-Z0-9]/g, '');
+    
+    document.getElementById('invite-code').textContent = cleanCode || 'CLASS';
+    
+    const openBtn = document.getElementById('open-app-btn');
+    if (cleanCode && cleanCode !== 'CLASS' && cleanCode !== 'JOIN') {
+      openBtn.href = 'classnode://join/' + cleanCode;
+    } else {
+      openBtn.href = '/#download';
+      openBtn.textContent = 'Get ClassNode App';
+    }
+  </script>
+</body>
+</html>

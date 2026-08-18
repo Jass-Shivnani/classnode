@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Account & Data Deletion - ClassNode</title>
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0B0E14;
+      --card: #151921;
+      --border: #222938;
+      --text: #F1F5F9;
+      --text-dim: #94A3B8;
+      --primary: #326AE5;
+      --danger: #EF4444;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Plus Jakarta Sans', -apple-system, sans-serif; }
+    body { background-color: var(--bg); color: var(--text); line-height: 1.7; padding: 40px 20px; }
+    .container { max-width: 640px; margin: 0 auto; }
+    .header { display: flex; align-items: center; gap: 16px; margin-bottom: 40px; }
+    .header img { width: 44px; height: 44px; }
+    .header h1 { font-size: 28px; font-weight: 800; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; margin-bottom: 24px; }
+    h2 { font-size: 20px; font-weight: 700; color: var(--text); margin-bottom: 12px; }
+    p, ul { color: var(--text-dim); margin-bottom: 16px; font-size: 15px; }
+    ul { padding-left: 24px; margin-bottom: 20px; }
+    li { margin-bottom: 8px; }
+    .form-group { margin-bottom: 20px; }
+    label { display: block; font-size: 14px; font-weight: 600; margin-bottom: 8px; color: var(--text); }
+    input[type="email"], textarea {
+      width: 100%;
+      background: #0B0E14;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 12px 16px;
+      color: var(--text);
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    input[type="email"]:focus, textarea:focus {
+      border-color: var(--primary);
+    }
+    .btn-danger {
+      width: 100%;
+      background: var(--danger);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 14px 20px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .btn-danger:hover { opacity: 0.9; }
+    .notice {
+      background: rgba(239, 68, 68, 0.1);
+      border: 1px solid rgba(239, 68, 68, 0.2);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 24px;
+      font-size: 14px;
+      color: #FCA5A5;
+    }
+    a { color: var(--primary); text-decoration: none; font-weight: 600; }
+    a:hover { text-decoration: underline; }
+    .footer { text-align: center; margin-top: 48px; color: var(--text-dim); font-size: 14px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <a href="/"><img src="/logo.svg" alt="ClassNode Logo" /></a>
+      <div>
+        <h1>Account & Data Deletion</h1>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Delete Your ClassNode Account and Data</h2>
+      <p>In accordance with Google Play and Apple User Data policies, you can request the permanent deletion of your account and all associated personal data.</p>
+      
+      <div class="notice">
+        <strong>⚠️ Warning:</strong> Deleting your account is permanent. All your cloud-synced classes, attendance history, assignments, and shared group memberships will be permanently deleted from our servers within 30 days.
+      </div>
+
+      <h2>How to Delete in the App (Instant)</h2>
+      <p>You can instantly delete your account directly from your device:</p>
+      <ul>
+        <li>Open the <strong>ClassNode</strong> app.</li>
+        <li>Tap your <strong>Profile Avatar / Settings</strong> in the top header.</li>
+        <li>Scroll down and tap <strong>"Delete Account"</strong>.</li>
+        <li>Confirm deletion. Your authentication record and cloud data will be wiped immediately.</li>
+      </ul>
+
+      <h2>Web Deletion Request Form</h2>
+      <p>If you have uninstalled the app or cannot log in, submit this request and our automated deletion service will process your account removal:</p>
+
+      <form action="mailto:privacy@classnode.app?subject=Account%20and%20Data%20Deletion%20Request" method="POST" enctype="text/plain">
+        <div class="form-group">
+          <label for="email">Your Account Email</label>
+          <input type="email" id="email" name="Email" placeholder="student@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="reason">Reason (Optional)</label>
+          <textarea id="reason" name="Reason" rows="3" placeholder="Tell us why you are deleting your account..."></textarea>
+        </div>
+
+        <button type="submit" class="btn-danger">Submit Account Deletion Request</button>
+      </form>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2026 ClassNode. All rights reserved. &bull; <a href="/privacy.html">Privacy Policy</a> &bull; <a href="/terms.html">Terms of Service</a></p>
+    </div>
+  </div>
+</body>
+</html>
